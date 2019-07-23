@@ -2,14 +2,16 @@
 public class Main {
 
 	public static void main(String[] args) {
-		int a[] = {-1, 2, -3, 4, -5, 6, -7, 8, -9, 0, 10};
-		
-		Quicksort sorter = new Quicksort();
-		sorter.quicksort(a, 0, a.length-1);
-		
-		for(int i: a) {
-			System.out.print(i + " ");
-		}
+		try {
+			if (Integer.parseInt(args[0]) >= 1950 && Integer.parseInt(args[0]) <= 2019) {
+				int year = Integer.parseInt(args[0]);
+				Quicksort sorter = new Quicksort();
+			} else {
+				System.out.println("Enter a year between 1950 and 2019.");
+			}
+		} catch (NumberFormatException e) {
+			System.out.println(e);
+		}	
 	}
-
+	
 }
